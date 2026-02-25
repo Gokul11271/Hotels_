@@ -1,0 +1,129 @@
+.splash {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #2C2420 0%, #1a1512 50%, #2C2420 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.splash__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.splash__logo-ring {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(142, 116, 75, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow:
+        0 0 60px rgba(142, 116, 75, 0.2),
+        0 0 120px rgba(142, 116, 75, 0.08),
+        inset 0 0 40px rgba(142, 116, 75, 0.08);
+}
+
+.splash__logo-ring::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid rgba(142, 116, 75, 0.25);
+    animation: splash-pulse 2s ease-in-out infinite;
+}
+
+.splash__logo-ring::after {
+    content: '';
+    position: absolute;
+    inset: -14px;
+    border-radius: 50%;
+    border: 1px solid rgba(142, 116, 75, 0.12);
+    animation: splash-pulse 2s ease-in-out infinite 0.5s;
+}
+
+@keyframes splash-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+.splash__logo-img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    filter: brightness(1.4);
+}
+
+.splash__title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #FAF7F2;
+}
+
+.splash__tagline {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: var(--color-gold-light);
+}
+
+/* Ambient glow */
+.splash__glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(142, 116, 75, 0.12) 0%, transparent 60%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Corner decorative lines */
+.splash::before,
+.splash::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(142, 116, 75, 0.15);
+    z-index: 1;
+}
+
+.splash::before {
+    top: 40px;
+    left: 40px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.splash::after {
+    bottom: 40px;
+    right: 40px;
+    border-left: none;
+    border-top: none;
+}

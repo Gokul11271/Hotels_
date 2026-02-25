@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Outer shield -->
+  <path d="M60 6L104 28V68C104 90 84 108 60 114C36 108 16 90 16 68V28L60 6Z" fill="none" stroke="#8E744B" stroke-width="2.5"/>
+  <!-- Inner shield -->
+  <path d="M60 16L94 34V66C94 84 78 99 60 104C42 99 26 84 26 66V34L60 16Z" fill="none" stroke="#8E744B" stroke-width="1" opacity="0.4"/>
+  <!-- Crown detail at top -->
+  <path d="M44 30L52 24L60 30L68 24L76 30" fill="none" stroke="#8E744B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Letter E -->
+  <text x="60" y="72" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="#8E744B" text-anchor="middle" dominant-baseline="central">E</text>
+  <!-- Bottom laurel left -->
+  <path d="M38 88C42 84 48 82 52 84" fill="none" stroke="#8E744B" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M40 92C44 88 50 86 54 88" fill="none" stroke="#8E744B" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Bottom laurel right -->
+  <path d="M82 88C78 84 72 82 68 84" fill="none" stroke="#8E744B" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M80 92C76 88 70 86 66 88" fill="none" stroke="#8E744B" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Small diamond at bottom -->
+  <polygon points="60,95 63,98 60,101 57,98" fill="#8E744B"/>
+</svg>

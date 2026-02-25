@@ -1,0 +1,128 @@
+.booking {
+    background: var(--color-bg-primary);
+}
+
+.booking__layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.booking__form {
+    padding: 44px;
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-card);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    position: relative;
+}
+
+/* Gold accent line at top */
+.booking__form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 24px;
+    right: 24px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    border-radius: 0 0 2px 2px;
+}
+
+.booking__submit {
+    width: 100%;
+    margin-top: 8px;
+    padding: 16px;
+}
+
+.booking__summary {
+    padding-top: 20px;
+}
+
+.booking__calculator {
+    padding: 32px;
+    border-radius: var(--radius-md);
+    margin-top: 32px;
+    background: var(--color-bg-card);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    position: relative;
+}
+
+/* Decorative corner */
+.booking__calculator::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    border-top: 1.5px solid var(--color-gold);
+    border-left: 1.5px solid var(--color-gold);
+}
+
+.booking__calculator::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    border-bottom: 1.5px solid var(--color-gold);
+    border-right: 1.5px solid var(--color-gold);
+}
+
+.booking__calc-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin-bottom: 24px;
+}
+
+.booking__calc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.booking__calc-row span:last-child {
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.booking__calc-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+    margin: 8px 0;
+}
+
+.booking__calc-total {
+    font-size: 1.1rem;
+    padding-top: 16px;
+}
+
+.booking__calc-total span:last-child {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--color-gold);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 968px) {
+    .booking__layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .booking__summary {
+        order: -1;
+    }
+}

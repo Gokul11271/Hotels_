@@ -1,0 +1,103 @@
+.offers {
+    background: var(--color-bg-secondary);
+    position: relative;
+}
+
+.offers__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.offer-card {
+    position: relative;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s var(--ease-smooth);
+    box-shadow: var(--shadow-sm);
+}
+
+.offer-card:hover {
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(142, 116, 75, 0.08);
+    transform: translateY(-8px);
+}
+
+.offer-card__glow {
+    position: absolute;
+    inset: 0;
+    background: var(--card-gradient);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.offer-card:hover .offer-card__glow {
+    opacity: 1;
+}
+
+.offer-card__content {
+    position: relative;
+    z-index: 1;
+    padding: 44px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.offer-card__icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 16px rgba(142, 116, 75, 0.3);
+}
+
+.offer-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: var(--color-text-primary);
+}
+
+.offer-card__desc {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.offer-card__highlight {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--color-gold);
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+    padding-left: 16px;
+    border-left: 2px solid var(--color-gold);
+}
+
+.offer-card__btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 968px) {
+    .offers__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
