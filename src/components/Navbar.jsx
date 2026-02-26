@@ -85,19 +85,35 @@ export default function Navbar() {
                     {mobileOpen && (
                         <motion.div
                             className="navbar__mobile-menu"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3, ease: 'easeOut' }}
                         >
-                            {navLinks.map(link => (
-                                <button key={link.target} className="navbar__mobile-link" onClick={() => scrollTo(link.target)}>
-                                    {link.label}
+                            <div className="navbar__mobile-links">
+                                {navLinks.map((link, i) => (
+                                    <motion.button
+                                        key={link.target}
+                                        className="navbar__mobile-link"
+                                        onClick={() => scrollTo(link.target)}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: 0.1 + i * 0.05 }}
+                                    >
+                                        {link.label}
+                                    </motion.button>
+                                ))}
+                            </div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.1 + navLinks.length * 0.05 }}
+                                style={{ marginTop: '12px' }}
+                            >
+                                <button className="btn btn-primary" onClick={() => scrollTo('booking')} style={{ width: '100%' }}>
+                                    Book Now
                                 </button>
-                            ))}
-                            <button className="btn btn-primary" onClick={() => scrollTo('booking')} style={{ width: '100%' }}>
-                                Book Now
-                            </button>
+                            </motion.div>
                         </motion.div>
                     )}
                 </AnimatePresence>

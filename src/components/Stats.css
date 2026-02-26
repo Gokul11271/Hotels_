@@ -86,10 +86,25 @@
 @media (max-width: 768px) {
     .stats__grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 48px;
+        gap: 32px;
     }
 
     .stat:not(:last-child)::after {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats {
+        padding: 60px 0;
+    }
+
+    .stats__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .stat__number {
+        font-size: 3rem;
     }
 }

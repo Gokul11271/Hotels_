@@ -126,34 +126,54 @@
     top: 100%;
     left: 0;
     right: 0;
-    padding: 20px var(--container-padding);
+    padding: 30px var(--container-padding);
+    background: rgba(250, 247, 242, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px rgba(44, 36, 32, 0.1);
+    z-index: -1;
+}
+
+.navbar__mobile-links {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    background: rgba(250, 247, 242, 0.98);
-    backdrop-filter: blur(20px);
-    overflow: hidden;
-    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 20px;
 }
 
 .navbar__mobile-link {
     background: none;
     border: none;
-    color: var(--color-text-secondary);
-    font-family: var(--font-body);
-    font-size: 1rem;
+    color: var(--color-text-primary);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 400;
     text-align: left;
-    padding: 14px 0;
+    padding: 16px 0;
     cursor: pointer;
-    border-bottom: 1px solid var(--color-border);
-    transition: color 0.3s;
+    border-bottom: 1px solid rgba(142, 116, 75, 0.08);
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.navbar__mobile-link:last-child {
+    border-bottom: none;
 }
 
 .navbar__mobile-link:hover {
     color: var(--color-gold);
+    padding-left: 8px;
 }
 
 @media (max-width: 768px) {
+    .navbar__inner {
+        padding: 0 20px;
+    }
+
+    .navbar__logo-text {
+        font-size: 1.3rem;
+    }
+
     .navbar__links {
         display: none;
     }
@@ -163,6 +183,28 @@
     }
 
     .navbar__mobile-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(142, 116, 75, 0.1);
+    }
+
+    .navbar--scrolled .navbar__mobile-toggle {
+        background: rgba(142, 116, 75, 0.08);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar__logo-text {
+        font-size: 1.15rem;
+        letter-spacing: 0.5px;
+    }
+
+    .navbar__logo-img {
+        width: 30px;
+        height: 30px;
     }
 }

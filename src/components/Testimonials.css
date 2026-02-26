@@ -148,6 +148,21 @@
 
 @media (max-width: 640px) {
     .testimonial {
-        padding: 40px 28px;
+        padding: 40px 24px;
+    }
+
+    .testimonial__text {
+        font-size: 1.1rem;
+        margin-bottom: 28px;
+    }
+
+    .testimonial__author {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .testimonial__name,
+    .testimonial__country {
+        text-align: center;
     }
 }

@@ -184,11 +184,17 @@
     font-weight: 500;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
     .restaurants__grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .restaurant-card__name {
+        font-size: 1.4rem;
     }
 }
+
 
 @media (max-width: 640px) {
     .restaurants__grid {

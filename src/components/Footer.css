@@ -246,22 +246,64 @@
     letter-spacing: 2px;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
     .footer__top {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
     }
 }
 
 @media (max-width: 640px) {
+    .footer {
+        padding: 60px 0 0;
+    }
+
     .footer__top {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 40px;
+    }
+
+    .footer__brand {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__logo {
+        justify-content: center;
+    }
+
+    .footer__socials {
+        justify-content: center;
+    }
+
+    .footer__heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer__links-group,
+    .footer__contact {
+        text-align: center;
+    }
+
+    .footer__links a {
+        justify-content: center;
+    }
+
+    .footer__contact-items {
+        align-items: center;
     }
 
     .footer__bottom {
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
         text-align: center;
+        padding: 32px 0;
+    }
+
+    .footer__legal {
+        justify-content: center;
     }
 }

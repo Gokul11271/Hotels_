@@ -164,11 +164,20 @@
 @media (max-width: 1100px) {
     .rooms__grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
 @media (max-width: 640px) {
     .rooms__grid {
         grid-template-columns: 1fr;
+    }
+
+    .room-card__image-wrapper {
+        height: 240px;
+    }
+
+    .room-card__type {
+        font-size: 1.4rem;
     }
 }

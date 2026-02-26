@@ -95,9 +95,24 @@
     font-size: 0.75rem;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
+    .offers__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 640px) {
     .offers__grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .offer-card__content {
+        padding: 32px 24px;
+    }
+
+    .offer-card__title {
+        font-size: 1.35rem;
     }
 }

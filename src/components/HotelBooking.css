@@ -119,10 +119,24 @@
 @media (max-width: 968px) {
     .booking__layout {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 48px;
     }
 
     .booking__summary {
         order: -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .booking__form {
+        padding: 30px 20px;
+    }
+
+    .booking__calculator {
+        padding: 24px 20px;
+    }
+
+    .booking__calc-total span:last-child {
+        font-size: 1.5rem;
     }
 }
