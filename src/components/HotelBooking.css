@@ -140,3 +140,21 @@
         font-size: 1.5rem;
     }
 }
+
+@media (max-width: 480px) {
+    .booking__form {
+        padding: 24px 16px;
+    }
+
+    .booking__calculator {
+        padding: 20px 16px;
+    }
+
+    .booking__calc-total span:last-child {
+        font-size: 1.3rem;
+    }
+
+    .booking__calc-row {
+        font-size: 0.82rem;
+    }
+}

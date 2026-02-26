@@ -102,6 +102,13 @@
     }
 }
 
+@media (max-width: 768px) {
+    .offers__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
 @media (max-width: 640px) {
     .offers__grid {
         grid-template-columns: 1fr;
@@ -114,5 +121,30 @@
 
     .offer-card__title {
         font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-card__content {
+        padding: 28px 20px;
+    }
+
+    .offer-card__icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .offer-card__title {
+        font-size: 1.25rem;
+    }
+
+    .offer-card__desc {
+        font-size: 0.82rem;
+    }
+
+    .offer-card__highlight {
+        font-size: 1rem;
     }
 }

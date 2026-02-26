@@ -166,3 +166,30 @@
         text-align: center;
     }
 }
+
+@media (max-width: 480px) {
+    .testimonial {
+        padding: 28px 16px;
+    }
+
+    .testimonial__text {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 24px;
+    }
+
+    .testimonial__stars {
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+    }
+
+    .testimonial__avatar {
+        width: 44px;
+        height: 44px;
+        font-size: 0.8rem;
+    }
+
+    .testimonials__carousel {
+        max-width: 100%;
+    }
+}

@@ -223,14 +223,33 @@
 }
 
 @media (max-width: 968px) {
+
+    /* Switch hero to column layout so booking bar flows below content */
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        overflow: visible;
+        min-height: 100vh;
+    }
+
     .hero__content {
-        padding: 100px 0 140px;
+        padding: 100px 0 60px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .hero__booking-bar {
         position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
         border-top: none;
         background: var(--color-bg-card);
+        width: 100%;
+        z-index: 4;
     }
 
     .hero__booking-inner {
@@ -244,6 +263,7 @@
         padding: 16px 20px;
         background: var(--color-bg-secondary);
         border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
     }
 
     .hero__booking-divider {
@@ -268,7 +288,7 @@
     }
 
     .hero__content {
-        padding: 80px 0 100px;
+        padding: 80px 0 48px;
     }
 
     .hero__cta {
@@ -282,9 +302,37 @@
         max-width: none;
     }
 
-    .hero__booking-bar {
-        margin-top: -40px;
-        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+    .hero__booking-inner {
+        padding: 28px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__content {
+        padding: 70px 0 36px;
+    }
+
+    .hero__label {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .hero__subtitle {
+        font-size: 0.95rem;
+        margin: 0 auto 36px;
+        padding: 0 8px;
+    }
+
+    .hero__booking-inner {
+        padding: 20px 16px;
+        gap: 12px;
+    }
+
+    .hero__booking-field {
+        padding: 12px 16px;
+    }
+
+    .hero__booking-btn {
+        padding: 14px;
     }
 }
